@@ -1,18 +1,19 @@
 package shop;
 import petss.*;
 public class zooshop
-{
+{	private static final int LEN = 100;
 	private int col;
 	private double income;
 	private double damages;
 	private double price_feed;
-	private pets[] pet = new pets[100];
+	private pets[] pet = new pets[LEN];
 		
 	public zooshop(int col, double income, double damages, double price_feed, pets[] pet)
 	{
 		this.col=col;
 		this.income=income;
 		this.damages=damages;
+		this.price_feed=price_feed;
 		for(int i=0; i<col; i++)
 		{
 			this.pet[i]=pet[i];
@@ -23,6 +24,7 @@ public class zooshop
 		this.col=col;
 		this.income=income;
 		this.damages=damages;
+		this.price_feed=price_feed;
 		for(int i=0; i<col; i++)
 		{
 			this.pet[i]=pet;

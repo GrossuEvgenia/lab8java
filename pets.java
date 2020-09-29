@@ -73,7 +73,7 @@ public class pets
 	}
 	public double add_price(double sum)
 	{
-		sum+=price;
+		sum+=this.price;
 		System.out.println("Total price: " + sum);
 		return sum;
 	}
