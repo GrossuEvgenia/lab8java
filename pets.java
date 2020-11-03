@@ -8,7 +8,14 @@ public class pets
 	private double price;
 	public pets ()
 	{
-		this.name="no_name";
+		name="no_name";
+		age=0;
+		wheit=0;
+		price=0;
+	}
+	public pets(String name)
+	{
+		this.name=name;
 		this.age=0;
 		this.wheit=0;
 		this.price=0;
@@ -64,12 +71,9 @@ public class pets
 		System.out.println("Enter pet's price");
 		price=in.nextDouble();
 	}
-	public void output()
+	public void output_pets()
 	{
-		System.out.println("Enter pet's name "+name);
-		System.out.println("Enter pet's age "+ age);
-		System.out.println("Enter pet's wheit "+wheit);
-		System.out.println("Enter pet's price "+price);		
+		System.out.println("pet's name "+name+" pet's age "+ age+" pet's wheit "+wheit+" pet's price "+price);		
 	}
 	public double add_price(double sum)
 	{
