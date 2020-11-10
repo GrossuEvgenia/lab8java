@@ -1,6 +1,7 @@
 package petss;
 import java.util.Scanner;
-public class pets
+import ex.*;
+public class pets 
 {
 	private String name;
 	private int age;
@@ -20,8 +21,12 @@ public class pets
 		this.wheit=0;
 		this.price=0;
 	}
-	public pets(String name, int age, int wheit, double price)
+	public pets(String name, int age, int wheit, double price)throws Ex
 	{
+		if(age<0||wheit<0||price<0)
+		{
+		throw  new Ex(1);	
+		}
 		this.name=name;
 		this.age=age;
 		this.wheit=wheit;
@@ -61,15 +66,30 @@ public class pets
 	}
 	public void input()
 	{	Scanner in = new Scanner(System.in);
-		pets pet = new pets("no-name",0,0,0);
 		System.out.println("Enter pet's name");
 		name=in.nextLine();
+		try{
 		System.out.println("Enter pet's age");
-		age=in.nextInt();
+		age=in.nextInt();}
+		catch(Exception e){
+			System.out.println("NOT DIGIT!!! - press any key");
+			in.next();
+		}
+		try{
 		System.out.println("Enter pet's wheit");
-		wheit=in.nextInt();
+		wheit=in.nextInt();}
+		catch(Exception e){
+			System.out.println("NOT DIGIT!!! - press any key");
+			
+		}
+		
+		try{
 		System.out.println("Enter pet's price");
-		price=in.nextDouble();
+		price=in.nextDouble();}
+		catch(Exception e){
+			System.out.println("NOT DIGIT!!! - press any key");
+			
+		}
 	}
 	public void output_pets()
 	{

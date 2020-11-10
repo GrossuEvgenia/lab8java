@@ -2,14 +2,18 @@ import java.util.Scanner;
 import shop.zooshop;
 import petss.pets;
 import tax_s.tax;
+import ex.Ex;
 public class Main
 {
-	public static void main (String[] args)
+	public static void main (String[] args) throws Exception
 	{	final int LEN=100;
 		
 		
 		 
 		 Scanner in = new Scanner(System.in);
+		
+		 
+
 		 System.out.println("Enter names pet\n");
 		 String s = in.nextLine();
 		 pets pet = new pets("kisa",1,4,5);//constructor with all value
@@ -75,6 +79,7 @@ public class Main
 		store1.output();
 		store1.income();
 		store1.output();
+		 pets pet10 = new pets("forerror",-1,0,0);
 		
 	}
 }
